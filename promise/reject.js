@@ -10,4 +10,4 @@ promise.then(function(data){
   console.log('error ' + error );
 })
 
-console.log("promise")
+console.log('promises');
