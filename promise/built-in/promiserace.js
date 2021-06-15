@@ -7,7 +7,7 @@ let promise1 = new Promise(function(resolve, reject){
 
 let promise2 = new Promise(function(resolve, reject){
   setTimeout(function(){
-    resolve('rejected');
+    reject('rejected');
   },2000)
 })
 
@@ -18,3 +18,4 @@ Promise.race([promise1, promise2])
   console.log(error);
   
 })
+//"resolved"
