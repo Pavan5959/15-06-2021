@@ -1,4 +1,5 @@
-/*promise2 checked due to timeout difference*/let promise1 = new Promise(function(resolve, reject){
+/*promise2 checked due to timeout difference*/
+let promise1 = new Promise(function(resolve, reject){
   setTimeout(function(){
       resolve('resolved');
   }, 8000)
@@ -6,7 +7,7 @@
 
 let promise2 = new Promise(function(resolve, reject){
   setTimeout(function(){
-    resolve('rejected');
+    reject('rejected');
   },2000)
 })
 
@@ -17,4 +18,5 @@ Promise.race([promise1, promise2])
   console.log(error);
   
 })
+
 // "rejected"
